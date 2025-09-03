@@ -88,7 +88,7 @@ class NavigationResource extends Resource
                                 ->visible(static::$showTimestamps)
                                 ->state(fn (?Navigation $record) => $record ? $record->updated_at->translatedFormat($schema->getDefaultDateTimeDisplayFormat()) : new HtmlString('&mdash;')),
                         ]),
-                    ])
+                ])
                     ->columnSpan([
                         12,
                         'lg' => 4,
@@ -147,10 +147,8 @@ class NavigationResource extends Resource
                     ->sortable(),
             ])
             ->recordActions([
-                EditAction::make()
-                    ->icon(null),
-                DeleteAction::make()
-                    ->icon(null),
+                EditAction::make(),
+                DeleteAction::make(),
             ]);
     }
 
