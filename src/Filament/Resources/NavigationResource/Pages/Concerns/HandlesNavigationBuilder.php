@@ -64,7 +64,6 @@ trait HandlesNavigationBuilder
     {
         $this->mountedItem = null;
         $this->mountedItemData = [];
-        $this->mountedActionData = [];
 
         $this->mountAction('item');
     }
@@ -146,8 +145,6 @@ trait HandlesNavigationBuilder
                             ...['children' => []],
                         ];
                     }
-
-                    $this->mountedActionData = [];
                 })
                 ->modalButton(__('filament-navigation::filament-navigation.items-modal.btn'))
                 ->label(__('filament-navigation::filament-navigation.items-modal.title')),
