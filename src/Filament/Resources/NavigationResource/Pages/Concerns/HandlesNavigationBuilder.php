@@ -68,7 +68,7 @@ trait HandlesNavigationBuilder
         $this->mountAction('item');
     }
 
-    protected function getActions(): array
+    protected function getHeaderActions(): array
     {
         return [
             Action::make('item')
@@ -146,7 +146,7 @@ trait HandlesNavigationBuilder
                         ];
                     }
                 })
-                ->modalButton(__('filament-navigation::filament-navigation.items-modal.btn'))
+                ->modalSubmitActionLabel(__('filament-navigation::filament-navigation.items-modal.btn'))
                 ->label(__('filament-navigation::filament-navigation.items-modal.title')),
         ];
     }
